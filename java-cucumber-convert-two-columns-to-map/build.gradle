@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	compile('info.cukes:cucumber-java:1.2.5')
+	compile('info.cukes:cucumber-junit:1.2.5')
+	compile('junit:junit:4.12')
+}
