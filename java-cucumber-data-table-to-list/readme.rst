@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/cucumber-data-table-convert-one-column-table-to-a-list/
+You can read tutorial https://www.roytuts.com/cucumber-data-table-convert-one-column-table-to-a-list/

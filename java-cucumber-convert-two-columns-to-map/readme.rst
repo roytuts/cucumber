@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/cucumber-data-table-convert-a-two-column-table-to-a-map/
+You can read tutorial https://www.roytuts.com/cucumber-data-table-convert-a-two-column-table-to-a-map/
