@@ -2,12 +2,19 @@ package com.roytuts.cuke.flow.steps;
 
 import java.util.List;
 
-import org.hamcrest.CoreMatchers;
-import org.junit.Assert;
+//Cucumber 1.2.5
+//import org.hamcrest.CoreMatchers;
+//import org.junit.Assert;
+//import cucumber.api.java.en.Given;
+//import cucumber.api.java.en.Then;
+//import cucumber.api.java.en.When;
+//Cucumber 1.2.5
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import org.junit.jupiter.api.Assertions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class SumSteps {
 
@@ -28,7 +35,8 @@ public class SumSteps {
 
 	@Then("^I will get (\\d+\\.\\d+)$")
 	public void I_will_get_(Double expectedTotal) throws Throwable {
-		Assert.assertThat(sum, CoreMatchers.is(expectedTotal));
+		// Assert.assertThat(sum, CoreMatchers.is(expectedTotal)); //Junit 4
+		Assertions.assertEquals(sum, expectedTotal); //Junit 5
 		System.out.println("Actual Sum : " + sum);
 	}
 
