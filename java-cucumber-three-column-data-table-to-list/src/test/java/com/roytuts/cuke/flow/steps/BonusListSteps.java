@@ -2,14 +2,22 @@ package com.roytuts.cuke.flow.steps;
 
 import java.util.List;
 
-import org.hamcrest.CoreMatchers;
-import org.junit.Assert;
+//Cucumber 1.2.5
+//import org.hamcrest.CoreMatchers;
+//import org.junit.Assert;
+//import com.roytuts.cuke.flow.vo.EmpBonus;
+//import cucumber.api.java.en.Given;
+//import cucumber.api.java.en.Then;
+//import cucumber.api.java.en.When;
+//Cucumber 1.2.5
+
+import org.junit.jupiter.api.Assertions;
 
 import com.roytuts.cuke.flow.vo.EmpBonus;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BonusListSteps {
 
@@ -33,8 +41,10 @@ public class BonusListSteps {
 	@Then("^the organization has to pay total extra Rs. (\\d+) to (\\d+) employees$")
 	public void the_organization_has_to_pay_total_extra_Rs_to_employees(int expTotalMoney, int expTotalEmployee)
 			throws Throwable {
-		Assert.assertThat(totalBonusAmt, CoreMatchers.is(expTotalMoney));
-		Assert.assertThat(totalEmployee, CoreMatchers.is(expTotalEmployee));
+		// Assert.assertThat(totalBonusAmt, CoreMatchers.is(expTotalMoney)); //Junit 4
+		// Assert.assertThat(totalEmployee, CoreMatchers.is(expTotalEmployee)); //Junit 4
+		Assertions.assertEquals(totalBonusAmt, expTotalMoney);
+		Assertions.assertEquals(totalEmployee, expTotalEmployee);
 	}
 
 }

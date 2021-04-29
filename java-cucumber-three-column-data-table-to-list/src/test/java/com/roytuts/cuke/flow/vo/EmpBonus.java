@@ -1,5 +1,7 @@
 package com.roytuts.cuke.flow.vo;
 
+import java.util.Map;
+
 public class EmpBonus {
 
 	private String designation;
@@ -30,4 +32,13 @@ public class EmpBonus {
 		this.noOfEmployees = noOfEmployees;
 	}
 
+	//Cucumber 6.10.3
+	public static EmpBonus createEmpBonus(Map<String, String> entry) {
+		EmpBonus empBonus = new EmpBonus();
+		empBonus.setDesignation(entry.get("designation"));
+		empBonus.setBonus(Integer.parseInt(entry.get("bonus")));
+		empBonus.setNoOfEmployees(Integer.parseInt(entry.get("noOfEmployees")));
+		return empBonus;
+	}
+	//Cucumber 6.10.3
 }

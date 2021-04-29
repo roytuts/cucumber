@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/cucumber-data-table-convert-a-three-column-table-to-a-list/
+You can read tutorial https://roytuts.com/cucumber-data-table-convert-a-three-column-table-to-a-list/
