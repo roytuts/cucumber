@@ -1,0 +1,41 @@
+buildscript {
+	ext {
+		springBootVersion = '2.7.4'
+	}
+    repositories {
+    	mavenLocal()
+    	mavenCentral()
+    }
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	testImplementation("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
+		exclude group: 'org.mockito'
+		exclude group: 'org.junit.jupiter'
+		exclude group: 'org.junit.vintage'
+	}
+	testImplementation 'io.cucumber:cucumber-spring:7.8.0'
+    testImplementation 'io.cucumber:cucumber-java:7.8.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.8.0'
+    testImplementation 'io.rest-assured:rest-assured:5.2.0'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+/*test {
+  	// Use old (Junit 4) runner since Cucumber doesn't support Junit 5
+  	useJUnit()
+}*/
